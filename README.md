@@ -54,21 +54,25 @@ Contains a single route to handle Telegram webhooks (updates).
     
 
   - ![5](assets/5.png?raw=true)
-    - Choose `Python Interpreter`
+    - Choose `Python Interpreter` and choose `Show All...`
     
 
   - ![6](assets/6.png?raw=true)
+    - Click `+` and choose `Add`
+  
 
-- In the terminal in PyCharm, do the following:
-  - Create and activate virtual environment <br>
-   `https://flask.palletsprojects.com/en/1.1.x/installation/#`
-  - Install required dependencies <br>
-	- Flask - `pip install Flask` <br>
-	- Google Authentication - `pip install google.oauth` <br>
-	- Dialogflow Client - `pip install google-cloud-dialogflow` <br>
-	- Basic Caching Library - `pip install Flask-Caching` <br>
-    - Telegram Client - `pip install pyTelegramBotAPI`
+  - ![7](assets/7.png?raw=true)
+    - Ensure `New environment` is selected and ensure `Location` of environment is the `venv` subfolder in your project folder
+  
 
+  - ![8](assets/8.png?raw=true)
+    - Click `OK`
+  
+
+  - ![9](assets/9.png?raw=true)
+    - Go to the `Terminal` tab at the bottom toolbar and type in `pip install -r requirements.txt`
+    - Note that you do not need to do this if you have the `requirements plugin` 
+  
 ---
 
 ### Telegram Setup
