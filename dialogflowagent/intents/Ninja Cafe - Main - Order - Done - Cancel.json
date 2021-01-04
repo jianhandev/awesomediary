@@ -1,0 +1,44 @@
+{
+  "id": "5d362155-ec30-4042-9485-ce4f4df81722",
+  "name": "Ninja Cafe - Main - Order - Done - Cancel",
+  "auto": true,
+  "contexts": [
+    "order-done"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "CANCEL_ORDER",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "No problem, I have cancelled your order. Let me know how else I can help you!",
+            "Sure thing. If you need anything else, I'll be right here!",
+            "Got it! When you're ready to order again, just let me know!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

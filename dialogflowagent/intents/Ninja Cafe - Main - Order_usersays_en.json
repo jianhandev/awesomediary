@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ac171661-a404-4647-a561-1cae5c847dc0",
+    "data": [
+      {
+        "text": "I want to order something",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171ad1-db27-4d45-8930-17d6572f2a42",
+    "data": [
+      {
+        "text": "Can I order something?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1716c4-608c-4bc7-abcb-213b3efcddf2",
+    "data": [
+      {
+        "text": "I want to start ordering some food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171e93-4835-46e4-9c4c-f058c27e0019",
+    "data": [
+      {
+        "text": "I am ready to place my orders",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171086-11f1-462e-b73b-cd70c6f7e998",
+    "data": [
+      {
+        "text": "I want to order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac17186e-22d1-4e2b-ba2d-cbf117712846",
+    "data": [
+      {
+        "text": "Let me place my orders",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1712a6-071d-44b1-92bb-499a42e160fb",
+    "data": [
+      {
+        "text": "I would like to order some food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171848-a9d9-41cd-9037-db624fee4165",
+    "data": [
+      {
+        "text": "Can i start ordering now?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "id": "46e00be1-21d1-4864-a9b1-3d0861c96c39",
+  "name": "Ninja Cafe (Default Fallback)",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SHOW_MAIN_SUGGESTIONS",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "I didn't quite catch what you said. What would you like to do at Ninja Cafe?",
+            "Sorry, what did you say? Let me know if you want to order something, check on your current orders, or enquire about the items on sale!",
+            "Hmm, I don't understand. What would you like to do at Ninja Cafe?",
+            "Welcome to Ninja Cafe! I didn't quite get what you said, but let me know if I can be of any assistance.",
+            "I'm sorry, what? Let me know how I can help you!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

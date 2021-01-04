@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ac169661-a404-4647-a561-1cae5c847dc0",
+    "data": [
+      {
+        "text": "where is my order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac169ad1-db27-4d45-8930-17d6572f2a42",
+    "data": [
+      {
+        "text": "i want to check on the status of my order please",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1696c4-608c-4bc7-abcb-213b3efcddf2",
+    "data": [
+      {
+        "text": "Is my order coming soon?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac169e93-4835-46e4-9c4c-f058c27e0019",
+    "data": [
+      {
+        "text": "When can I expect to get my food?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac169086-11f1-462e-b73b-cd70c6f7e998",
+    "data": [
+      {
+        "text": "Hey where is my food?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac16986e-22d1-4e2b-ba2d-cbf117712846",
+    "data": [
+      {
+        "text": "I want my food now!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1692a6-071d-44b1-92bb-499a42e160fb",
+    "data": [
+      {
+        "text": "Can i check when my food is coming?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac169848-a9d9-41cd-9037-db624fee4165",
+    "data": [
+      {
+        "text": "yo when will you arrive with my food?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

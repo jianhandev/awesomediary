@@ -1,0 +1,42 @@
+{
+  "id": "a53c988a-19b8-459f-a122-e985dd4c397d",
+  "name": "Ninja Cafe - Main - Check Orders",
+  "auto": true,
+  "contexts": [
+    "order-main"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SHOW_ORDERS",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "NA"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "dad2ef7e-9b9c-4048-a48f-939c4aae5638",
+  "name": "Ninja Cafe - Main - Locate Order",
+  "auto": true,
+  "contexts": [
+    "order-main"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SHOW_MAIN_SUGGESTIONS",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Be patient pls. Our cooks are trying their best...\n\nHow else can I help you?",
+            "Okok it's coming soon. Please chill.\n\nHow else can I help you?",
+            "I know you're hungry, but your order is on its way. Hang on!\n\nHow else can I help you?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

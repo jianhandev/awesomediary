@@ -1,0 +1,407 @@
+[
+  {
+    "id": "993eb0a3-4b4b-47a1-b6e7-54ccebc416da",
+    "data": [
+      {
+        "text": "Five servings of mac and cheese",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "acd3fb00-daa5-46a7-bf6b-b4dc50bc3869",
+    "data": [
+      {
+        "text": "I want ",
+        "userDefined": false
+      },
+      {
+        "text": "two of your caesar salads",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d5e5972b-7050-41d1-b610-c247860fd119",
+    "data": [
+      {
+        "text": "Three plates of your spaghetti",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " thanks",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ecea41e0-e2df-4057-a7cb-0e78a05269c8",
+    "data": [
+      {
+        "text": "Can you add ",
+        "userDefined": false
+      },
+      {
+        "text": "three blueberry donuts",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "five bacon sandwiches",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "two plates of spaghetti",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " to our order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9d412e48-b9b5-45aa-8a84-bd7b47702e14",
+    "data": [
+      {
+        "text": "We want ",
+        "userDefined": false
+      },
+      {
+        "text": "two BLT sandwiches",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "five bowls of caesar salad",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "611b4d72-9507-48f7-a8a8-adee1d79f2b0",
+    "data": [
+      {
+        "text": "Three loaves of sourdough bread",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "two almond crunch cookies",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " thanks",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ac8a6cfd-e3f6-4c9b-a6ff-d4cb555c4201",
+    "data": [
+      {
+        "text": "I think I\u0027ll get your ",
+        "userDefined": false
+      },
+      {
+        "text": "BLT",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " and the ",
+        "userDefined": false
+      },
+      {
+        "text": "blueberry donut",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b41cd325-bbbf-44f8-ad1c-f6e88606d3e3",
+    "data": [
+      {
+        "text": "We will get your ",
+        "userDefined": false
+      },
+      {
+        "text": "mac \u0026 cheese",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " and the ",
+        "userDefined": false
+      },
+      {
+        "text": "spaghetti",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " for our mains, and a ",
+        "userDefined": false
+      },
+      {
+        "text": "caesar salad",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " for our appetizer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "01168b31-d854-4ba9-9efb-452bb985f45e",
+    "data": [
+      {
+        "text": "My friends and I will all have ",
+        "userDefined": false
+      },
+      {
+        "text": "four steaks with fries",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0b00c8c5-c7e2-46a2-8d5b-cb7efd977da2",
+    "data": [
+      {
+        "text": "Can I get ",
+        "userDefined": false
+      },
+      {
+        "text": "three plates of macaroni and cheese",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "094798af-17b7-44dd-b20d-3eb24be691cb",
+    "data": [
+      {
+        "text": "I think I will have just ",
+        "userDefined": false
+      },
+      {
+        "text": "one caesar salad",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7c847462-4e36-44d5-9ed6-6761946a3c3d",
+    "data": [
+      {
+        "text": "I will try the ",
+        "userDefined": false
+      },
+      {
+        "text": "BLT bacon sandwich",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "95599893-e121-4e31-a436-34f0c2ba36d5",
+    "data": [
+      {
+        "text": "Please can I order your ",
+        "userDefined": false
+      },
+      {
+        "text": "aglio olio",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "266cc97d-ddef-4517-bda9-139baf2b8499",
+    "data": [
+      {
+        "text": "I want your ",
+        "userDefined": false
+      },
+      {
+        "text": "teriyaki chicken burger",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a62807da-fb39-45e6-9a2e-c29c791cd498",
+    "data": [
+      {
+        "text": "The ",
+        "userDefined": false
+      },
+      {
+        "text": "almond crunch cookie",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": " please",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b4de81d7-9efc-4902-9673-8b010b6766d7",
+    "data": [
+      {
+        "text": "Can I get your ",
+        "userDefined": false
+      },
+      {
+        "text": "blueberry donut",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "dfd5eef2-656f-4785-9e8b-3f9ff9df0bc6",
+    "data": [
+      {
+        "text": "I would like to have a ",
+        "userDefined": false
+      },
+      {
+        "text": "loaf of sourdough",
+        "meta": "@CafeOrderEntry",
+        "alias": "cafe-order-entry",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

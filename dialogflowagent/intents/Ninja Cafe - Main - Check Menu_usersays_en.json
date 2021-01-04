@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ac170661-a404-4647-a561-1cae5c847dc0",
+    "data": [
+      {
+        "text": "what do you guys sell?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac170ad1-db27-4d45-8930-17d6572f2a42",
+    "data": [
+      {
+        "text": "Can I see your menu?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1706c4-608c-4bc7-abcb-213b3efcddf2",
+    "data": [
+      {
+        "text": "What items do you have on your menu?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac170e93-4835-46e4-9c4c-f058c27e0019",
+    "data": [
+      {
+        "text": "What types of food do you sell?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac170086-11f1-462e-b73b-cd70c6f7e998",
+    "data": [
+      {
+        "text": "What is your menu?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac17086e-22d1-4e2b-ba2d-cbf117712846",
+    "data": [
+      {
+        "text": "What food can I order from you?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1702a6-071d-44b1-92bb-499a42e160fb",
+    "data": [
+      {
+        "text": "I want to see your menu please",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac170848-a9d9-41cd-9037-db624fee4165",
+    "data": [
+      {
+        "text": "What food can I order?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac170848-a9d9-41cd-9037-db624ffe4165",
+    "data": [
+      {
+        "text": "What do you guys have?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

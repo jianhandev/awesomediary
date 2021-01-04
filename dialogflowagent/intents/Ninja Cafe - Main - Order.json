@@ -1,0 +1,44 @@
+{
+  "id": "54f79039-337a-4bfe-be29-f58856b94351",
+  "name": "Ninja Cafe - Main - Order",
+  "auto": true,
+  "contexts": [
+    "order-main"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SHOW_MENU_OPTIONS",
+      "affectedContexts": [
+        {
+          "name": "order-ongoing",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "What would you like to order?",
+            "So what can I get you?",
+            "Here's our menu - just let me know what you want!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

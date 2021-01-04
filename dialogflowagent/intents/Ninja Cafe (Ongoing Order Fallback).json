@@ -1,0 +1,44 @@
+{
+  "id": "10c5a095-90d8-40e8-a29b-c627c872022e",
+  "name": "Ninja Cafe (Ongoing Order Fallback)",
+  "auto": true,
+  "contexts": [
+    "order-ongoing"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SHOW_ONGOING_ORDER_SUGGESTIONS",
+      "affectedContexts": [
+        {
+          "name": "order-ongoing",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "I didn't quite catch what you wanted to order. Are you done ordering something? Just say you're done and we can wrap up.",
+            "Sorry, what were you trying to order? If you still want to order more, let me know what else you're interested in. Else tell me if you're done too!",
+            "Hmm, I don't recognize your order. Let me know what you want. If you're unsure of what's available, you can also ask for the menu :)"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

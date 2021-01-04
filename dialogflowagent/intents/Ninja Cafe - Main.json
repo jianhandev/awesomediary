@@ -1,0 +1,46 @@
+{
+  "id": "2753c588-5e73-4a28-99b2-fae33e7ddfca",
+  "name": "Ninja Cafe - Main",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "DISPLAY_MAIN_GREETING",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Hi {}, welcome to Ninja Cafe! How can I help you?",
+            "Greetings {}}, welcome to Ninja Cafe! How can I help you?",
+            "Welcome to Ninja Cafe, {}! What would you like me to assist you with?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "ACTIVATE_NINJA_CAFE"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

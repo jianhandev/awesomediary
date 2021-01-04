@@ -1,0 +1,42 @@
+{
+  "id": "d6c441ae-cd6d-4159-a477-dedac1f15cbb",
+  "name": "Ninja Cafe - Main - Check Menu",
+  "auto": true,
+  "contexts": [
+    "order-main"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SHOW_MENU_RESPONSE",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "NA"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

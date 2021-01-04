@@ -1,0 +1,42 @@
+{
+  "id": "be58e0af-fb3d-4ebe-8f32-34f372a45c75",
+  "name": "Ninja Cafe - Main - Order - Done",
+  "auto": true,
+  "contexts": [
+    "order-ongoing"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "CONFIRM_ORDER",
+      "affectedContexts": [
+        {
+          "name": "order-done",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "NA"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

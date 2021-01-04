@@ -1,0 +1,44 @@
+{
+  "id": "e6f94294-1479-4315-a173-f97bc7a3bf1d",
+  "name": "Ninja Cafe - Main - Order - Done - Submit",
+  "auto": true,
+  "contexts": [
+    "order-done"
+  ],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "SUBMIT_ORDER",
+      "affectedContexts": [
+        {
+          "name": "order-main",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Thank you for dining at Ninja Cafe! Your order will be arriving shortly.\n\nIn the meantime, let me know how else I can help you!",
+            "We have submitted your order and it will be arriving soon.\n\n I'll be right here if you need anything else!",
+            "Got it! Please be patient while your order is on its way.\n\nHow else can we be of assistance to you here at Ninja Cafe?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

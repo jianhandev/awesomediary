@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ac171661-a404-4647-a561-1cae5c847dc0",
+    "data": [
+      {
+        "text": "What are my current orders?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171ad1-db27-4d45-8930-17d6572f2a42",
+    "data": [
+      {
+        "text": "Can I see my pending orders?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1716c4-608c-4bc7-abcb-213b3efcddf2",
+    "data": [
+      {
+        "text": "What have i already ordered from you?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171e93-4835-46e4-9c4c-f058c27e0019",
+    "data": [
+      {
+        "text": "What orders do I have pending?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171086-11f1-462e-b73b-cd70c6f7e998",
+    "data": [
+      {
+        "text": "Show me my orders",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac17186e-22d1-4e2b-ba2d-cbf117712846",
+    "data": [
+      {
+        "text": "I want to check what orders I have right now",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac1712a6-071d-44b1-92bb-499a42e160fb",
+    "data": [
+      {
+        "text": "What are my orders?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac171848-a9d9-41cd-9037-db624fee4165",
+    "data": [
+      {
+        "text": "Show me my pending orders",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

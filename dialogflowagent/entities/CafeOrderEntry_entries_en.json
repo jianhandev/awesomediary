@@ -1,0 +1,14 @@
+[
+  {
+    "value": "@sys.number-integer:item-number @CafeMenuItem:menu-item",
+    "synonyms": [
+      "@sys.number-integer:item-number @CafeMenuItem:menu-item"
+    ]
+  },
+  {
+    "value": "@CafeMenuItem:menu-item",
+    "synonyms": [
+      "@CafeMenuItem:menu-item"
+    ]
+  }
+]

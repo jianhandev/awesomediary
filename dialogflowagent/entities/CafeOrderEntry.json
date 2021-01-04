@@ -1,0 +1,9 @@
+{
+  "id": "3070da85-0bda-4396-9890-8ba3a91aaec4",
+  "name": "CafeOrderEntry",
+  "isOverridable": true,
+  "isEnum": true,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": true
+}
