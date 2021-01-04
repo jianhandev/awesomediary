@@ -35,6 +35,30 @@ Contains a single route to handle Telegram webhooks (updates).
 
 - Clone template project from git here: `git clone https://github.com/ninja-van/telegram-workshop-jan-2021.git`
 - Copy Google service account key file (see Dialogflow setup) to project base directory
+- Open template folder in PyCharm
+  - ![1](assets/1.png?raw=true)
+    - Click open
+  
+
+  - ![2](assets/2.png?raw=true)
+    - Select folder that was cloned in git and click open
+    
+
+- Set up virtual environment in PyCharm
+  - ![3](assets/3.png?raw=true)
+    - Open `preferences`
+    
+
+  - ![4](assets/4.png?raw=true)
+    - Go to `Project: telegram-workshop-jan-2021 in left side bar`
+    
+
+  - ![5](assets/5.png?raw=true)
+    - Choose `Python Interpreter`
+    
+
+  - ![6](assets/6.png?raw=true)
+
 - In the terminal in PyCharm, do the following:
   - Create and activate virtual environment <br>
    `https://flask.palletsprojects.com/en/1.1.x/installation/#`
