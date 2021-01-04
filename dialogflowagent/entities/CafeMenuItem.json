@@ -1,9 +1,0 @@
-{
-  "id": "8a143efe-a87f-4f9e-8522-c5efff2d37c6",
-  "name": "CafeMenuItem",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": true,
-  "allowFuzzyExtraction": true
-}

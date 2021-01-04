@@ -21,8 +21,7 @@ Contains a single route to handle Telegram webhooks (updates).
 - Generate a Google service account key
 - Create a new agent by following only the steps under _**Create an agent**_ here <br>
   `https://cloud.google.com/dialogflow/es/docs/quick/build-agent`
-- Zip the prebuilt agent files in `dialogflowagent` (excluding the parent folder itself)
-- Restore the agent with the zipped file via the console
+- Restore the agent with the `dialogflowagent.zip` file in the repository via the console
   - Visit `https://dialogflow.cloud.google.com/`
   - Select your created agent using the dropdown at the top left, under `Dialogflow Essentials`
   - Click on the gear icon beside the agent name
