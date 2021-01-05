@@ -22,7 +22,7 @@ def hello_world():
 
 
 # Validates incoming webhook request to make sure required fields are present, before processing
-@app.route('/webhook', methods=['POST'])
+@app.route('/telegram/webhook', methods=['POST'])
 def webhook():
     req_body = request.get_json()
 
