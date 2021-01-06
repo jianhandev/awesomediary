@@ -82,7 +82,7 @@ Contains a single route to handle Telegram webhooks (updates).
 - In PyCharm, create a run configuration with the `main.py` file path
 - Find the executable for ngrok which you installed, and expose your SNS port using ngrok e.g. `/path/to/ngrok http 5000`
   - ngrok will give you a HTTPS forwarding endpoint e.g. `Forwarding https://92955034edb1.ngrok.io -> http://localhost:5000`
-  - Your webhook will therefore be registered at that ngrok endpoint + route you have setup e.g. `https://<YOUR_NGROK_FORWARDING_SUBDOMAIN>.ngrok.io/telegram/webhook`
+  - Your webhook will therefore be registered at that ngrok endpoint + route you have setup e.g. `https://<YOUR_NGROK_FORWARDING_SUBDOMAIN>.ngrok.io/webhook`
 
 - Link your Telegram bot to your webhook
   - Open a terminal (or command prompt on Windows)
@@ -93,10 +93,10 @@ Contains a single route to handle Telegram webhooks (updates).
 curl -L -X POST "https://api.telegram.org/bot<API_TOKEN>/setWebhook?url=<WEBHOOK_URL>"
 
 e.g.
-curl -L -X POST "https://api.telegram.org/bot1234567890:AAG2g-bIHq4_JDWSINaOrhDw1gf5L7rzniM/setWebhook?url=https://d6e3134b7be7.ngrok.io/telegram/webhook"
+curl -L -X POST "https://api.telegram.org/bot1234567890:AAG2g-bIHq4_JDWSINaOrhDw1gf5L7rzniM/setWebhook?url=https://d6e3134b7be7.ngrok.io/webhook"
 ```
 
   - Test that your endpoint is returning a valid response for the webhook with the following 
 ```
-curl -L -X POST "https://d6e3134b7be7.ngrok.io/telegram/webhook"
+curl -L -X POST "https://d6e3134b7be7.ngrok.io/webhook"
 ```
