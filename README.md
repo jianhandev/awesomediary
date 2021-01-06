@@ -14,21 +14,6 @@ Contains a single route to handle Telegram webhooks (updates).
 - Install [Postman](https://www.postman.com/downloads/) to make API requests e.g. setting Telegram webhooks
 - Install git
 
-### Dialogflow Setup
-
-- Carry out Dialogflow setup here <br>
-  `https://cloud.google.com/dialogflow/es/docs/quick/setup`
-- Generate a Google service account key
-- Create a new agent by following only the steps under _**Create an agent**_ here <br>
-  `https://cloud.google.com/dialogflow/es/docs/quick/build-agent`
-- Restore the agent with the `dialogflowagent.zip` file in the repository via the console
-  - Visit `https://dialogflow.cloud.google.com/`
-  - Select your created agent using the dropdown at the top left, under `Dialogflow Essentials`
-  - Click on the gear icon beside the agent name
-  - Click on the `Export and Import` tab
-  - Click on `RESTORE FROM ZIP` and upload your zipped file
-  - You should see a green success bar `Done` after your agent file has been uploaded
-  - Once uploaded, click on the `Intents` section of the left panel. You should find all the intents already created for you e.g. those starting with `Ninja Cafe -...`
 
 
 ### Setup project on PyCharm
@@ -80,6 +65,12 @@ Contains a single route to handle Telegram webhooks (updates).
 - In Telegram, find the [BotFather](https://t.me/BotFather) and follow the steps for making a new bot
 
 - Save your new bot's token somewhere safe
+
+
+### Dialogflow Setup
+
+- You do not need to do any Dialogflow setup as we have already done it for you and placed the credentials in the repository.
+
 
 ### Local Dev
 
