@@ -33,7 +33,7 @@ def __parse_order(order):
 
 
 def get_orders_url(user: User):
-    return "".format(default_if_blank(user.id, ''))
+    return "https://api-dev.ninjavan.co/global/ninjacafe/orders/{}".format(default_if_blank(user.id, ''))
 
 
 def __send_request(method, url, body):
