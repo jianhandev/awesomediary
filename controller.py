@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from flask import request
 
 from api.dialogflow_api import detect_intent_via_text, detect_intent_via_event
@@ -24,5 +26,9 @@ def hello_world():
 # Validates incoming webhook request to make sure required fields are present, before processing
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    # FILL IN CODE
-    return
+    req_body = request.get_json()
+
+    print('Message from user:')
+    pprint(req_body)
+
+    return ''
