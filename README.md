@@ -64,7 +64,11 @@ Contains a single route to handle Telegram webhooks (updates).
 
 - In Telegram, find the [BotFather](https://t.me/BotFather) and follow the steps for making a new bot
 
-- Save your new bot's token somewhere safe
+- Type the command `/newbot` 
+
+- You will be prompted to enter a name for your bot. Please fill in a valid bot name (usually should end with a `bot` keyword)
+
+- You will be given a token to access telegram APIs. Please populate this token for the variable `TELEGRAM_API_TOKEN` in the `constants.py` file in the code.
 
 
 ### Dialogflow Setup
