@@ -10,20 +10,31 @@ def default_if_blank(s, default):
 
 # Extracts user id from Telegram request
 def get_user_from_request(req_body):
-    # FILL IN CODE
-    return
+    if 'message' in req_body:
+        req_from = req_body.get('message', {}).get('from', {})
+        return User(req_from.get('id', ''), __get_req_from_name(req_from))
+    else:
+        return ''
 
 
 # Extracts user's name from Telegram request
 def __get_req_from_name(req_from):
-    # FILL IN CODE
-    return
+    first_name = req_from.get('first_name')
+    last_name = req_from.get('last_name')
+    if is_not_blank(first_name, last_name):
+        return first_name + ' ' + last_name
+    elif is_not_blank(first_name):
+        return first_name # Return only first name if last name is not available
+    else:
+        return ''
 
 
 # Extracts user's input (text or button click) from Telegram request
 def get_user_input_from_request(req_body):
-    # FILL IN CODE
-    return
+    if 'message' in req_body:
+        return req_body.get('message', {}).get('text', '')
+    else:
+        return ''
 
 
 # Extracts user's commands from Telegram request
@@ -34,8 +45,7 @@ def get_user_command_from_request(req_body):
 
 # Checks where one or more string params provided are None or blank
 def is_not_blank(*string):
-    # FILL IN CODE
-    return
+    return all(s is not None and s for s in string)
 
 
 # Extracts list of Item objects from intent result that were captured from response

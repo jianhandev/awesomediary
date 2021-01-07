@@ -28,7 +28,10 @@ def hello_world():
 def webhook():
     req_body = request.get_json()
 
-    print('Message from user:')
-    pprint(req_body)
+    user = get_user_from_request(req_body)
+    user_input = get_user_input_from_request(req_body)
+
+    send_message(user, 'random_state', 'random_session_id',
+                 "Received your message '{}'. Hello to you :)".format(user_input))
 
     return ''
