@@ -28,21 +28,24 @@ def hello_world():
 def webhook():
     req_body = request.get_json()
 
+    if req_body is None:
+        return "ERROR: No request body", 400
+
     user = get_user_from_request(req_body)
     session = get_current_session(user)
     user_input = get_user_input_from_request(req_body)
-
-    intent_result = __process_dialogflow_input(user, session, user_input)
-
-    send_message(user, intent_result.intent.display_name, session.id,
-                 "Received your message '{}'. Hello to you :)".format(user_input))
+    if is_not_blank(user.id, user_input):
+        __process_dialogflow_input(user, session, user_input)
 
     return ''
 
 
 # Calls Dialogflow API to trigger an intent match
+# Calls the corresponding function handler for the intent result action if present
 def __process_dialogflow_input(user: User, session: Session, user_input):
     intent_result = detect_intent_via_text(session.id, user_input)
-    pprint(intent_result)
 
-    return intent_result
+    intent_action = default_if_blank(intent_result.action, '')
+
+    if is_not_blank(intent_action):
+        INTENT_HANDLERS.get(intent_action, handle_invalid_intent)(user, intent_result, session.id)
