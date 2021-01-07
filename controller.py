@@ -29,9 +29,20 @@ def webhook():
     req_body = request.get_json()
 
     user = get_user_from_request(req_body)
+    session = get_current_session(user)
     user_input = get_user_input_from_request(req_body)
 
-    send_message(user, 'random_state', 'random_session_id',
+    intent_result = __process_dialogflow_input(user, session, user_input)
+
+    send_message(user, intent_result.intent.display_name, session.id,
                  "Received your message '{}'. Hello to you :)".format(user_input))
 
     return ''
+
+
+# Calls Dialogflow API to trigger an intent match
+def __process_dialogflow_input(user: User, session: Session, user_input):
+    intent_result = detect_intent_via_text(session.id, user_input)
+    pprint(intent_result)
+
+    return intent_result
