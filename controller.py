@@ -32,10 +32,6 @@ def webhook():
     user_input = get_user_input_from_request(req_body)
     commands = get_user_command_from_request(req_body)
 
-    time = "22:00"
-    
-    if time:
-        send_timed_message(user, time)
 
     if is_not_blank(user.id, user_input):
         __process_request(user, session, user_input, commands)
@@ -46,8 +42,10 @@ def webhook():
 # Process incoming request as either one with commands or one for Dialogflow
 def __process_request(user: User, session: Session, user_input, commands):
     if len(commands) > 0:
+        print("Processing command...")
         __process_telegram_commands(user, session, commands, user_input)
     else:
+        print("Writing to journal")
         add_to_journal(user, session, user_input)
 
     #     __process_dialogflow_input(user, session, user_input)
@@ -68,12 +66,18 @@ def __process_telegram_commands(user: User, session: Session, commands, user_inp
 # Need to call Dialogflow to start a new session with main context here, if session retrieved from cache is new
     # if session.is_new:
        # detect_intent_via_event(session.id, 'NINJA_CAFE_MAIN_EVENT' )
-    individual_responses = filter(is_not_blank, map(__process_individual_telegram_command, commands))
-    # # chosen_command = commands(0)
-    # response = process_individual_telegram_command_with_parameter(chosen_command, user_input)
-    response = "\n---\n".join(individual_responses)
+    # individual_responses = filter(is_not_blank, map(__process_individual_telegram_command, commands))
+    # response = "\n---\n".join(individual_responses)
+    
+    chosen_command = commands.pop()
+    print(commands)
+    print(chosen_command)
+    response = __process_individual_telegram_command_with_parameter(chosen_command, user_input, user)
+    print(response)
+
     add_to_journal(user, session, response)
     send_message(user, ", " .join(commands), session.id, response)
+
 
 def __process_individual_telegram_command (command) :
     if is_not_blank(command):
@@ -81,11 +85,11 @@ def __process_individual_telegram_command (command) :
     else :
         return ''
 
-# def __process_individual_telegram_command_with_param (command, user_input) :
-#     if is_not_blank(command):
-#         return COMMAND_HANDLERS.get(command, handle_invalid_command)(command)
-#     else :
-#         return ''
+def __process_individual_telegram_command_with_parameter (command, user_input, user) :
+    if is_not_blank(command):
+        return COMMAND_HANDLERS.get(command, handle_invalid_command)(user_input, user)
+    else:
+        return ''
 
 # def __get_question_from_response(response):
 #     if is_not_blank(response):
