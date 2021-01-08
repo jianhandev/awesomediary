@@ -79,6 +79,6 @@ COMMAND_HANDLERS = {
     'hi': lambda ignored: __hi(), 
     'next': lambda ignored: __next(), 
     'end': lambda ignored: __end(),
-    'ask': lambda user_input: __set_reminder(user_input),
+    # 'ask': lambda user_input: __set_reminder(user_input),
     'today': lambda ignored: __today()
 }
