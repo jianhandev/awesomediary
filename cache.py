@@ -9,8 +9,15 @@ from utils import default_if_blank, is_not_blank
 
 # Returns a session id for the current user, or generates a new one (UUID)
 def get_current_session(user: User):
-    # FILL IN CODE
-    return
+    session_key = __session_key(user)
+    session_id = cache.get(session_key)
+
+    if is_not_blank(session_id):
+        return Session(session_id, False)
+    else:
+        new_session_id = uuid.uuid4().hex
+        cache.set(session_key, new_session_id)
+        return Session(new_session_id, True)
 
 
 # Returns the Dictionary of items (and their counts) for the user in the current session order, or an empty Dict if none
@@ -54,8 +61,7 @@ def __add_item_to_orders(orders, item: Item):
 
 
 def __session_key(user: User):
-    # FILL IN CODE
-    return
+    return "session_{}".format(default_if_blank(user.id, ''))
 
 
 def __current_orders_key(user: User, session_id):

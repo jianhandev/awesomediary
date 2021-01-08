@@ -1,3 +1,4 @@
+from pprint import pprint
 from flask import request
 
 from api.dialogflow_api import detect_intent_via_text, detect_intent_via_event
@@ -24,5 +25,23 @@ def hello_world():
 # Validates incoming webhook request to make sure required fields are present, before processing
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    # FILL IN CODE
-    return
+    req_body = request.get_json()
+
+    user = get_user_from_request(req_body)
+    session = get_current_session(user)
+    user_input = get_user_input_from_request(req_body)
+
+    __process_dialogflow_input(user, session, user_input)
+
+    return ''
+
+
+# Calls Dialogflow API to trigger an intent match
+# Calls the corresponding function handler for the intent result action if present
+def __process_dialogflow_input(user: User, session: Session, user_input):
+    intent_result = detect_intent_via_text(session.id, user_input)
+
+    intent_action = default_if_blank(intent_result.action, '')
+
+    if is_not_blank(intent_action):
+        INTENT_HANDLERS.get(intent_action, handle_invalid_intent)(user, intent_result, session.id)
