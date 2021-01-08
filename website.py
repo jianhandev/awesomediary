@@ -2,7 +2,7 @@ import shutil
 import glob
 import os
 import subprocess
-import git
+#import git
 
 def create_web_journal(file):
     os.chdir("/awesomeDiary")

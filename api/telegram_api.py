@@ -1,5 +1,6 @@
 import telebot
 from telebot import types
+from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from beans.user import User
 from constants import TELEGRAM_API_TOKEN
@@ -21,28 +22,37 @@ def send_message(user: User, state, session_id, response):
 
 
 # Send a message to Telegram chat with options, with two options in a row by default
-def send_message_with_options(user: User, state, session_id, response, *options, row_width=2):
+def send_message_with_options(user: User, state, session_id, response, *options, row_width=5):
     print("Sending response '{}' with options '{}' for user {} session {} state '{}'"
           .format(response, options, user.id, session_id, state))
 
-    markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, row_width=row_width)
-    markup.add(*options)
+    # markup = types.InlineKeyboardMarkup(None, row_width)
 
+    keyboard = [
+        [InlineKeyboardButton("Hackerearth"), InlineKeyboardButton("Hackerrank")],
+        [InlineKeyboardButton("Codechef"), InlineKeyboardButton("Spoj")],
+        [InlineKeyboardButton("Codeforces"), InlineKeyboardButton("ALL")]
+    ]
+
+    markup = InlineKeyboardMarkup(keyboard)
+
+    # for option in options:
+    #     markup.add(option)
+    
     return bot.send_message(user.id, response, reply_markup=markup)
-
 
 def schedule_checker():
     while True:
         schedule.run_pending()
         sleep(1)
 
-def function_to_run(user: User):
-    return bot.send_message(user.id, "This is a timed message.")
+def function_to_run(user: User, response):
+    return bot.send_message(user.id, response)
 
-def send_timed_message(user: User, time):    # Create the job in schedule.
-    print("Sending response for user {} "
-          .format(user.id))
-    schedule.every().day.at(time).do(function_to_run, user)
+def send_timed_message(user: User, time, response):    # Create the job in schedule.
+    print("Sending response {} for user {} "
+          .format(response, user.id))
+    schedule.every().day.at(time).do(function_to_run, user, response)
 
     # Spin up a thread to run the schedule check so it doesn't block your bot.
     # This will take the function schedule_checker which will check every second

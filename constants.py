@@ -5,30 +5,16 @@ import json
 
 DEFAULT_DIALOGFLOW_LANGUAGE_CODE = "en"
 
-# MENU_CODES_TO_OPTIONS = {
-#     "MENU_ITEM_BREAD": "Rye Sourdough Bread",
-#     "MENU_ITEM_DONUT": "Blueberry Jelly Donut",
-#     "MENU_ITEM_COOKIE": "Almond Crunch Cookie",
-#     "MENU_ITEM_SANDWICH": "BLT Sandwich",
-#     "MENU_ITEM_BURGER": "Teriyaki Chicken Burger",
-#     "MENU_ITEM_SPAGHETTI": "Spaghetti Aglio Olio",
-#     "MENU_ITEM_MACARONI": "Macaroni Mac and Cheese",
-#     "MENU_ITEM_STEAK": "Minute Steak Frites",
-#     "MENU_ITEM_SALAD": "Caesar Salad"
-# }
-
 DEFAULT_GREETING = 'Hi Glad we could talk today, just say \'hi\'or let me know what you need!'
 DEFAULT_ERROR_MESSAGE = 'Sorry, something went wrong. Please try again later!'
-# MAIN_SUGGESTIONS = (
-#     "I want to order something",
-#     "What is on your menu?",
-#     "What are my current orders?",
-#     "Where is my order?",
-# )
-# ONGOING_ORDER_SUGGESTIONS = (
-#     "What is on your menu?",
-#     "I'm done ordering!"
-# )
+
+MOOD = {
+    "happy": "~(≧▽≦)/~",
+    "sad": "(>_<)",
+    "angry": "(♯｀∧´)",
+    "meh": "(´･_･`)",
+    "annoyed": "(-_-ll)" 
+}
 
 RANDOM_QUESTION_ABOUT_THE_DAY = {
     1:"What kind of day are you having?",
@@ -56,14 +42,14 @@ FIRST_QUESTION = "Here's your first question!\n"
 NEXT_QUESTION = "Here's your next question :)\n"
 BYE_MSG = "Come back tomorrow! ;)"
 
+# Change the following to suit your project
+DIALOGFLOW_PROJECT_ID = "ninja-van-dialogflow-devmy"
+GOOGLE_SERVICE_ACCOUNT_FILE_PATH = "ninja-van-dialogflow-devmy.json"
+TELEGRAM_API_TOKEN = "1538593503:AAENwT_YNS24IuenvSHT_gf5ri1DkmZiT70"
+
 # def get_question():
 #     rand = randrange(1, 15)
 #     questions = json.loads('questions.json')
 
 #     current_question = questions[str(rand)]
 #     return current_question
-
-# Change the following to suit your project
-DIALOGFLOW_PROJECT_ID = "ninja-van-dialogflow-devmy"
-GOOGLE_SERVICE_ACCOUNT_FILE_PATH = "ninja-van-dialogflow-devmy.json"
-TELEGRAM_API_TOKEN = "1538593503:AAENwT_YNS24IuenvSHT_gf5ri1DkmZiT70"
