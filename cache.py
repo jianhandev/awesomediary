@@ -72,21 +72,10 @@ def get_journal_entry():
 def add_to_journal(user: User, session: Session, user_input):
 #msg: get_message(user, session_id)
 
-    user_folder = "{}".format(default_if_blank(user.handle, ''))
-
-    print(user_folder)
+    user_folder = "data/{}".format(default_if_blank(user.handle, ''))
 
     if not path.exists(user_folder):
         os.mkdir(user_folder)
-
-    # try:
-        # os.chdir("../" + user_folder)
-        # open(user_folder)
-        # print(user.handle)
-    # except:
-        # os.mkdir("../" + user_folder)
-        # os.chdir("../" + user_folder)
-
 
     # latest_qn = ""
     # try:
