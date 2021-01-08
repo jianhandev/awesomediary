@@ -42,8 +42,7 @@ def function_to_run(user: User):
 def send_timed_message(user: User, time):    # Create the job in schedule.
     print("Sending response for user {} "
           .format(user.id))
-    schedule.every().day.at(time).do(
-        function_to_run, user)
+    schedule.every().day.at(time).do(function_to_run, user)
 
     # Spin up a thread to run the schedule check so it doesn't block your bot.
     # This will take the function schedule_checker which will check every second

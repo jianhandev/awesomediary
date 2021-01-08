@@ -1,15 +1,17 @@
-from utils import get_user_from_request
+from utils import \
+    get_user_from_request
 from constants import *
-from api.telegram_api import send_message, send_message_with_options
+from api.telegram_api import send_message, send_message_with_options, send_timed_message
 from beans.user import User
 from cache import get_journal_entry
 import random
+import time
 
 # temporary variable that stores questions asked
 asked_qns = []
 
 # Returns an error message stating that command is invalid
-def handle_invalid_command(command):
+def handle_invalid_command():
     return DEFAULT_ERROR_MESSAGE
 
 
@@ -50,10 +52,25 @@ def __end():
 def __today():
     return get_journal_entry()
 
+def is_hh_mm_time(time_string):
+    try:
+        time.strptime(time_string, '%H:%M')
+    except ValueError:
+        return False
+    return len(time_string) == 5
+
 # Set the time for the bot to ask question
-# def __set_reminder(user_input):
-#     args = user_input.split(" ")
-#     return "the user input is" + args 
+def __set_reminder(user_input, user):
+    args = user_input.split(" ")[0]
+    if len(args) > 1:
+        time = args[1]
+        if is_hh_mm_time(time):
+            send_timed_message(user, time)
+            return "Time set successfully at" + time
+        else:
+            return "Please enter in the format of '/ask hh:mm'" 
+    else:
+        return "Please enter in the format of '/ask hh:mm'" 
 
 # Returns a simple tutorial of the bot
 def __show_starter_menu():
@@ -79,6 +96,6 @@ COMMAND_HANDLERS = {
     'hi': lambda ignored: __hi(), 
     'next': lambda ignored: __next(), 
     'end': lambda ignored: __end(),
-    'ask': lambda user_input: __set_reminder(user_input),
+    'ask': lambda user_input, user: __set_reminder(user_input, user),
     'today': lambda ignored: __today()
 }
