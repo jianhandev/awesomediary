@@ -5,6 +5,9 @@ from beans.session import Session
 from beans.user import User
 from main import cache
 from utils import default_if_blank, is_not_blank
+from command_handlers import asked_qns
+import os
+from datetime import date 
 
 
 # Returns a session id for the current user, or generates a new one (UUID)
@@ -32,8 +35,8 @@ def get_current_order(user: User, session_id):
         return {}
 
 
-# Adds a list of Item objects to the user's current order
-def add_to_order(user: User, session_id, items):
+# Adds an response to the user's current entry (response is a string)
+def add_to_entry(user: User, session_id, items):
     orders_key = __current_orders_key(user, session_id)
     orders = get_current_order(user, session_id)
 
@@ -44,6 +47,35 @@ def add_to_order(user: User, session_id, items):
 
     return orders
 
+# gets the message journal entry from the chat
+def get_message():
+    # To Do
+    return ''
+
+
+# Convert the message journal entry into a Markdown file by user and session_id
+def add_to_journal(user: User, session: Session, user_input):
+#msg: get_message(user, session_id)
+
+    try:
+        os.makedirs(user)
+    except:
+        os.chdir(user)
+            
+    # latest_qn = ""
+    # try:
+    #     latest_qn = asked_qns[-1]
+    # except:
+    #     latest_qn = "Unknown question"
+    
+    try:
+        f = open(str(user.name) + str(date.today()) + ".md", "x")
+        f.write(user_input)
+    except:
+        f = open(str(user.name) + str(date.today()) + ".md", "a")
+        f.write("\n" + user_input)
+    f.close()
+
 
 # Clears the list of Item objects for the user's current order
 def clear_from_order(user: User, session_id):
@@ -52,6 +84,7 @@ def clear_from_order(user: User, session_id):
 
 
 def __add_item_to_orders(orders, item: Item):
+
     if item.name in orders:
         orders[item.name] = orders[item.name] + item.count
     else:

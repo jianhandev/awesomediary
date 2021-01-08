@@ -56,7 +56,6 @@ def __add_item_to_orders(orders, item: Item):
         orders[item.name] = orders[item.name] + item.count
     else:
         orders[item.name] = item.count
-
     return orders
 
 
