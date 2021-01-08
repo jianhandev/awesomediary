@@ -69,24 +69,24 @@ def __process_telegram_commands(user: User, session: Session, commands, user_inp
     # if session.is_new:
        # detect_intent_via_event(session.id, 'NINJA_CAFE_MAIN_EVENT' )
     individual_responses = filter(is_not_blank, map(__process_individual_telegram_command, commands))
-    response = "\n---\n" .join(individual_responses)
-    chosen_command = commands(0)
-    response = process_individual_telegram_command_with_parameter(chosen_command, user_input)
-    add_to_journal(User, session, __get_question_from_response(response))
+    # # chosen_command = commands(0)
+    # response = process_individual_telegram_command_with_parameter(chosen_command, user_input)
+    response = "\n---\n".join(individual_responses)
+    add_to_journal(User, session, response)
     send_message(user, ", " .join(commands), session.id, response)
 
 def __process_individual_telegram_command (command) :
-    if is_not_blank(command):
-        return COMMAND_HANDLERS.get(command, handle_invalid_command)(command, user_input)
-    else :
-        return ''
-
-def __process_individual_telegram_command (command, user_input) :
     if is_not_blank(command):
         return COMMAND_HANDLERS.get(command, handle_invalid_command)(command)
     else :
         return ''
 
+# def __process_individual_telegram_command_with_param (command, user_input) :
+#     if is_not_blank(command):
+#         return COMMAND_HANDLERS.get(command, handle_invalid_command)(command)
+#     else :
+#         return ''
 
-def __get_question_from_response(response):
-    return response.split("\n")[1]
+# def __get_question_from_response(response):
+#     if is_not_blank(response):
+#         return response.split("\n")[1]

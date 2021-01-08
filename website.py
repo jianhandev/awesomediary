@@ -1,6 +1,7 @@
 import shutil
 import glob
 import os
+import subprocess
 
 def create_web_journal(file):
     os.chdir("/awesomeDiary")
@@ -11,4 +12,4 @@ for file in glob.glob("*.md"):
 for f in files:
     shutil.copy(f, '_posts')
 
-os.subcompress("git add ., git commit -m,")
+os.subprocess("git add ., git commit -m 'Add file', git push origin main")

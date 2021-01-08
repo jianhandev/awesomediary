@@ -1,7 +1,8 @@
 from utils import get_user_from_request
-from constants import RANDOM_QUESTION, DEFAULT_GREETING, DEFAULT_ERROR_MESSAGE, RANDOM_QUESTION_ABOUT_THE_DAY
+from constants import *
 from api.telegram_api import send_message, send_message_with_options
 from beans.user import User
+from cache import get_journal_entry
 import random
 
 # temporary variable that stores questions asked
@@ -17,19 +18,18 @@ def __show_default_greeting():
     return DEFAULT_GREETING
 
 # Starts the current journaling session
-def __hi(command):
+def __hi():
     
     key = random.choice(list(RANDOM_QUESTION_ABOUT_THE_DAY))
     question = RANDOM_QUESTION_ABOUT_THE_DAY[key]
     # question = get_question()
     asked_qns.append(question)
-    response = "Here's your first question! \n"
-    return response + question
+    return FIRST_QUESTION + question
 
 # Generates the next question to be asked and checks that the next question is not repeated 
 def __next():
     if not asked_qns: # Checks if the user has started the hi command first
-        return "You haven't started an entry for today!"
+        return NO_ENTRY
 
     key = random.choice(list(RANDOM_QUESTION))
     question = RANDOM_QUESTION[key]
@@ -40,17 +40,20 @@ def __next():
         # question = get_question()
     
     asked_qns.append(question)
-    response = "Here's your next question :) \n"
-    return response + question
+    return NEXT_QUESTION + question
 
 # Ends the current journaling session
 def __end():
     asked_qns.clear()
-    return "Come back tomorrow! ;)"
+    return BYE_MSG
+
+def __today():
+    return get_journal_entry()
 
 # Set the time for the bot to ask question
-def __set_reminder():
-    return "/ask hh:MM" 
+# def __set_reminder(user_input):
+#     args = user_input.split(" ")
+#     return "the user input is" + args 
 
 # Returns a simple tutorial of the bot
 def __show_starter_menu():
@@ -76,5 +79,6 @@ COMMAND_HANDLERS = {
     'hi': lambda ignored: __hi(), 
     'next': lambda ignored: __next(), 
     'end': lambda ignored: __end(),
-    'ask': lambda ignored: __set_reminder()
+    'ask': lambda user_input: __set_reminder(user_input),
+    'today': lambda ignored: __today()
 }

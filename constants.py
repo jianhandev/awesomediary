@@ -51,6 +51,11 @@ RANDOM_QUESTION = {
     10: "What are some of the memories you associate with springtime? With summer, fall, and winter?"
 }
 
+NO_ENTRY = "You haven't started an entry for today!"
+FIRST_QUESTION = "Here's your first question!\n"
+NEXT_QUESTION = "Here's your next question :)\n"
+BYE_MSG = "Come back tomorrow! ;)"
+
 # def get_question():
 #     rand = randrange(1, 15)
 #     questions = json.loads('questions.json')

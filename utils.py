@@ -1,3 +1,4 @@
+from pprint import pprint
 from beans.item import Item
 from beans.user import User
 
@@ -14,13 +15,13 @@ def default_if_blank(s, default):
 def get_user_from_request(req_body):
     if 'message' in req_body:
         req_from = req_body.get('message', {}).get('from', {})
-        return User(req_from.get('id', ''), __get_req_from_name(req_from))
+        return User(req_from.get('id', ''), __get_name_from_req(req_from), __get_handle_from_req(req_from))
     else:
         return ''
 
 
 # Extracts user's name from Telegram request
-def __get_req_from_name(req_from):
+def __get_name_from_req(req_from):
     first_name = req_from.get('first_name')
     last_name = req_from.get('last_name')
     if is_not_blank(first_name, last_name):
@@ -30,6 +31,14 @@ def __get_req_from_name(req_from):
     else:
         return ''
 
+# Extract telegram handle from Telegram request
+def __get_handle_from_req(req_from):
+    pprint(req_from)
+    handle = req_from.get('username')
+    if is_not_blank(handle):
+        return handle
+    else:
+        return ''
 
 # Extracts user's input (text or button click) from Telegram request
 def get_user_input_from_request(req_body):
