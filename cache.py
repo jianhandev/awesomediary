@@ -7,6 +7,7 @@ from main import cache
 from utils import default_if_blank, is_not_blank
 # from command_handlers import asked_qns
 import os
+from os import path
 from datetime import date 
 from text_format import Text_Format
 from constants import FIRST_QUESTION, NEXT_QUESTION, BYE_MSG
@@ -71,13 +72,21 @@ def get_journal_entry():
 def add_to_journal(user: User, session: Session, user_input):
 #msg: get_message(user, session_id)
 
-    user_folder = user.handle
+    user_folder = "{}".format(default_if_blank(user.handle, ''))
 
-    try:
-        # os.chdir('./' + str(user.handle))
-        open(user_folder)
-    except:
+    print(user_folder)
+
+    if not path.exists(user_folder):
         os.mkdir(user_folder)
+
+    # try:
+        # os.chdir("../" + user_folder)
+        # open(user_folder)
+        # print(user.handle)
+    # except:
+        # os.mkdir("../" + user_folder)
+        # os.chdir("../" + user_folder)
+
 
     # latest_qn = ""
     # try:
@@ -85,15 +94,15 @@ def add_to_journal(user: User, session: Session, user_input):
     # except:
     #     latest_qn = "Unknown question"
     
-    new_file_name = str(date.today()) + ".md"
+    new_file_name = user_folder + '/' + str(date.today()) + ".md"
 
     try:
         # f = open('./' + str(user.handle) + str(date.today()) + ".md", "x")
-        f = open(user_folder + '/' + new_file_name, 'x')
+        f = open(new_file_name, 'x')
         f.write(user_input)
     except:
         # f = open('./' + str(user.handle) + str(date.today()) + ".md", "a")
-        f = open(user_folder + '/' + new_file_name, 'a')
+        f = open(new_file_name, 'a')
         f.write("\n" + user_input)
     f.close()
 

@@ -48,7 +48,7 @@ def __process_request(user: User, session: Session, user_input, commands):
     if len(commands) > 0:
         __process_telegram_commands(user, session, commands, user_input)
     else:
-        add_to_journal(User, session, user_input)
+        add_to_journal(user, session, user_input)
 
     #     __process_dialogflow_input(user, session, user_input)
 
@@ -72,7 +72,7 @@ def __process_telegram_commands(user: User, session: Session, commands, user_inp
     # # chosen_command = commands(0)
     # response = process_individual_telegram_command_with_parameter(chosen_command, user_input)
     response = "\n---\n".join(individual_responses)
-    add_to_journal(User, session, response)
+    add_to_journal(user, session, response)
     send_message(user, ", " .join(commands), session.id, response)
 
 def __process_individual_telegram_command (command) :

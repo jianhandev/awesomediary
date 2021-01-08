@@ -10,6 +10,6 @@ for file in glob.glob("*.md"):
     files.append(file)
 
 for f in files:
-    shutil.copy(f, '_posts')
+    shutil.copy(f, '/data')
 
 os.subprocess("git add ., git commit -m 'Add file', git push origin main")

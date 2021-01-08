@@ -11,7 +11,8 @@ class User:
     @property
     def name(self):
         return self.__name
-
+    
     @property
     def handle(self):
         return self.__handle
+
