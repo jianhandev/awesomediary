@@ -130,3 +130,6 @@ dmypy.json
 
 # Ignore idea metadata
 .idea/
+
+# Ignore data files
+data/
