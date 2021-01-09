@@ -1,4 +1,5 @@
 # from os import SCHED_BATCH
+from utils import get_user_from_callback
 from cache import add_to_journal
 import telebot
 from telebot import types
@@ -19,51 +20,7 @@ def send_message(user: User, state, session_id, response):
     print("Sending response '{}' for user {} session {} state '{}'"
           .format(response, user.id, session_id, state))
 
-    return bot.send_message(user.id, response, reply_markup="markdown")
-
-
-# Send a message to Telegram chat with options, with two options in a row by default
-def send_message_with_options(user: User, state, session_id, response, *options, row_width=5):
-    print("Sending response '{}' with options '{}' for user {} session {} state '{}'"
-          .format(response, options, user.id, session_id, state))
-
-    keyboard = [
-        [InlineKeyboardButton(MOOD["happy"], callback_data='happy')],
-        [InlineKeyboardButton(MOOD["sad"], callback_data='sad')],
-        [InlineKeyboardButton(MOOD["angry"], callback_data='angry')],
-        [InlineKeyboardButton(MOOD["meh"], callback_data='meh')],
-        [InlineKeyboardButton(MOOD["annoyed"], callback_data='annoyed')]
-    ]
-
-    markup = InlineKeyboardMarkup(keyboard)
-    
-    return bot.send_message(user.id, response, reply_markup=markup)
-
-# can share the link ure referencing?
-# https://python-telegram-bot.readthedocs.io/en/stable/telegram.callbackquery.html
-# https://core.telegram.org/bots/api#callbackquery
-# https://www.mindk.com/blog/how-to-develop-a-chat-bot/
-
-@bot.callback_query_handler(func=lambda call: True)
-def iq_callback(query):
-   data = query.data 
-   handle_callback(query)
-
-
-def handle_callback(query):
-    response = "Noted/Dont be sad/stay happy... <3"
-    # required to remove the loading state
-    bot.answer_callback_query(query.id, text=response)
-    # Write mood into journal 
-    # add_to_journal(user, query) 
-    # send_result(query.message, response])
-
-# def send_result(message, ex_code):
-#    bot.send_message(
-#        message.chat.id, response,
-#     #    reply_markup=get_update_keyboard(ex),
-#     #    parse_mode='HTML'
-#    ) 
+    return bot.send_message(user.id, response, parse_mode='Markdown')
 
 def schedule_checker():
     while True:

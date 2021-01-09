@@ -19,6 +19,23 @@ def get_user_from_request(req_body):
     else:
         return ''
 
+# Extracts user id from Telegram request
+def get_user_from_callback(req_body):
+    if 'callback_query' in req_body:
+        req_from = req_body.get('callback_query', {}).get('from', {})
+        return User(req_from.get('id', ''), __get_name_from_req(req_from), __get_handle_from_req(req_from))
+    else:
+        return ''
+
+# Extracts user id from Telegram request
+def get_callback_from_request(req_body):
+    print(req_body)
+    if 'callback_query' in req_body:
+        query = req_body.get('callback_query', {})
+        print(query)
+        return 
+    else:
+        return ''
 
 # Extracts user's name from Telegram request
 def __get_name_from_req(req_from):
