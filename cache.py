@@ -53,7 +53,7 @@ def add_to_journal(user: User, user_input):
     try:
         f = open(new_file_name, 'x')
         f.write(user_input)
-    except:
+    except: 
         f = open(new_file_name, 'a')
         f.write("\n" + user_input)
 

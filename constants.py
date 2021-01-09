@@ -35,7 +35,5 @@ NEXT_QUESTION = "Here's your next question :)\n"
 BYE_MSG = "Come back tomorrow! ;)"
 
 # Change the following to suit your project
-DIALOGFLOW_PROJECT_ID = "ninja-van-dialogflow-devmy"
-GOOGLE_SERVICE_ACCOUNT_FILE_PATH = "ninja-van-dialogflow-devmy.json"
-TELEGRAM_API_TOKEN = "1538593503:AAENwT_YNS24IuenvSHT_gf5ri1DkmZiT70"
+TELEGRAM_API_TOKEN = ""
 
