@@ -79,7 +79,6 @@ def get_user_command_from_request(req_body):
 def get_command_arguments_from_request(req_body):
     if 'message' in req_body and 'entities' in req_body[ 'message' ]:
         text = req_body.get( 'message' ).get( 'text' )
-        arguments = text.split(" ", 1)[1];
         return set(map( lambda entity: text[entity[ 'offset' ] + 1 : entity[ 'offset' ] + entity[ 'length' ]],
             filter( lambda entity: entity[ 'type' ] == 'bot_command' ,
                 req_body[ 'message' ][ 'entities' ])))

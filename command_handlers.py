@@ -1,12 +1,7 @@
-from utils import \
-    get_user_from_request,\
-    is_not_blank
 from constants import *
-from api.telegram_api import send_message, send_timed_message
-from beans.user import User
+from api.telegram_api import send_timed_message
 from cache import get_journal_entry, add_to_journal
 import random
-from random import randint
 import time
 
 # temporary variable that stores questions asked
@@ -15,7 +10,6 @@ asked_qns = []
 # Returns an error message stating that command is invalid
 def handle_invalid_command(user_input, user, **kwargs):
     return DEFAULT_ERROR_MESSAGE
-
 
 # Returns a greeting message with instructions on how to get started
 def __show_default_greeting(user_input, user, **kwargs):

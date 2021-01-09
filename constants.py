@@ -1,8 +1,3 @@
-from random import randrange
-import requests
-import json
-
-
 DEFAULT_DIALOGFLOW_LANGUAGE_CODE = "en"
 
 DEFAULT_GREETING = 'Hi Glad we could talk today, just say \'hi\'or let me know what you need!'
@@ -43,5 +38,4 @@ BYE_MSG = "Come back tomorrow! ;)"
 DIALOGFLOW_PROJECT_ID = "ninja-van-dialogflow-devmy"
 GOOGLE_SERVICE_ACCOUNT_FILE_PATH = "ninja-van-dialogflow-devmy.json"
 TELEGRAM_API_TOKEN = "1538593503:AAENwT_YNS24IuenvSHT_gf5ri1DkmZiT70"
-
 

@@ -1,12 +1,7 @@
-# from os import SCHED_BATCH
-from utils import get_user_from_callback
-from cache import add_to_journal
 import telebot
-from telebot import types
-from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from beans.user import User
-from constants import MOOD, TELEGRAM_API_TOKEN
+from constants import TELEGRAM_API_TOKEN
 
 import schedule
 from threading import Thread

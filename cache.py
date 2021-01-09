@@ -1,14 +1,12 @@
-import uuid
-
 from beans.item import Item
 from beans.session import Session
 from beans.user import User
 from main import cache
 from utils import default_if_blank, is_not_blank
-import os
-from os import path
+from os import path, mkdir
 from datetime import date 
 from constants import *
+import uuid
 
 # Returns a session id for the current user, or generates a new one (UUID)
 def get_current_session(user: User):
@@ -43,12 +41,12 @@ def get_journal_entry(user: User):
 def add_to_journal(user: User, user_input):
 
     if not path.exists("data"):
-        os.mkdir("data")
+        mkdir("data")
 
     user_folder = "data/{}".format(default_if_blank(user.handle, ''))
 
     if not path.exists(user_folder):
-        os.mkdir(user_folder)
+        mkdir(user_folder)
     
     new_file_name = user_folder + '/' + str(date.today()) + ".md"
 
