@@ -25,7 +25,6 @@ def hello_world():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req_body = request.get_json()
-
     user = get_user_from_request(req_body)
     session = get_current_session(user)
     user_input = get_user_input_from_request(req_body)
@@ -36,12 +35,12 @@ def webhook():
 
     return ''
 
-
-# Process incoming request as either one with commands or one for Dialogflow
+# Process incoming request as either one with commands or a response to prompted questions
 def __process_request(user: User, session: Session, user_input, commands):
     if len(commands) > 0:
         __process_telegram_commands(user, session, commands, user_input)
     else:
+        print(user_input)
         add_to_journal(user, user_input)
 
 # Processes all individual commands found in user input, concatenating them into a single response for user

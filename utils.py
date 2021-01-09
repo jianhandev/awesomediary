@@ -42,6 +42,7 @@ def __get_handle_from_req(req_from):
 
 # Extracts user's input (text or button click) from Telegram request
 def get_user_input_from_request(req_body):
+    print(req_body)
     if 'message' in req_body:
         return req_body.get('message', {}).get('text', '')
     else:
@@ -67,8 +68,6 @@ def get_command_arguments_from_request(req_body):
                 req_body[ 'message' ][ 'entities' ])))
     else:
         return {}
-
-
 
 # Checks where one or more string params provided are None or blank
 def is_not_blank(*string):

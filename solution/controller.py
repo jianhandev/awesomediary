@@ -6,7 +6,7 @@ from beans.session import Session
 from beans.user import User
 from cache import get_current_session
 from command_handlers import COMMAND_HANDLERS, handle_invalid_command
-from intent_handlers import INTENT_HANDLERS, handle_invalid_intent
+# from intent_handlers import INTENT_HANDLERS, handle_invalid_intent
 from main import app
 from utils import \
     get_user_from_request, \

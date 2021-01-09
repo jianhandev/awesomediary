@@ -39,7 +39,6 @@ def get_journal_entry(user: User):
 
 # Convert the message journal entry into a Markdown file by user and session_id
 def add_to_journal(user: User, user_input):
-#msg: get_message(user, session_id)
 
     user_folder = "data/{}".format(default_if_blank(user.handle, ''))
 

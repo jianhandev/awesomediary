@@ -10,35 +10,44 @@ import time
 
 # temporary variable that stores questions asked
 asked_qns = []
+first_qn = True
 
 # Returns an error message stating that command is invalid
-def handle_invalid_command(**kwargs):
+def handle_invalid_command(user_input, user, **kwargs):
     return DEFAULT_ERROR_MESSAGE, False
 
 
 # Returns a greeting message with instructions on how to get started
-def __show_default_greeting(**kwargs):
+def __show_default_greeting(user_input, user, **kwargs):
     return DEFAULT_GREETING, False
 
 # Starts the current journaling session
 def __hi(user_input, user):
-    key = random.choice(list(RANDOM_QUESTION_ABOUT_THE_DAY))
-    question = RANDOM_QUESTION_ABOUT_THE_DAY[key]
+    # key = random.choice(list(RANDOM_QUESTION_ABOUT_THE_DAY))
+    # question = RANDOM_QUESTION_ABOUT_THE_DAY[key]
+    question = "How's your mood today? \n"\
+        "Type '/next' for the next question once done :)"
     asked_qns.append(question)
-    add_to_journal(user, NEXT_QUESTION + question)
+    add_to_journal(user, FIRST_QUESTION + question)
     return (FIRST_QUESTION + question), True
 
 # Generates the next question to be asked and checks that the next question is not repeated 
 def __next(user_input, user):
     if not asked_qns: # Checks if the user has started the hi command first
         return NO_ENTRY, False
-
-    key = random.choice(list(RANDOM_QUESTION))
-    question = RANDOM_QUESTION[key]
-    while question in asked_qns: 
+    question = ""
+    
+    if first_qn == True:
+        key = random.choice(list(RANDOM_QUESTION_ABOUT_THE_DAY))
+        question = RANDOM_QUESTION_ABOUT_THE_DAY[key]
+        first_qn = False
+    else:
         key = random.choice(list(RANDOM_QUESTION))
         question = RANDOM_QUESTION[key]
-    
+        while question in asked_qns: 
+            key = random.choice(list(RANDOM_QUESTION))
+            question = RANDOM_QUESTION[key]
+        
     asked_qns.append(question)
     add_to_journal(user, NEXT_QUESTION + question)
 
@@ -47,6 +56,7 @@ def __next(user_input, user):
 # Ends the current journaling session
 def __end(user_input, user):
     asked_qns.clear()
+    first_qn = True
     return BYE_MSG, False
 
 def __today(user_input, user):
